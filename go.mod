@@ -1,4 +1,4 @@
-module github.com/hrfee/waybar-mpris
+module git.hrfee.pw/hrfee/waybar-mpris
 
 go 1.15
 
