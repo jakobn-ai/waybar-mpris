@@ -150,6 +150,9 @@ func secondsToString(seconds int) string {
 
 // JSON returns json for waybar to consume.
 func playerJSON(p *player) string {
+	if p.Stopped {
+		return "{}"
+	}
 	artist := strings.ReplaceAll(p.Artist, "\"", "\\\"")
 	album := strings.ReplaceAll(p.Album, "\"", "\\\"")
 	title := strings.ReplaceAll(p.Title, "\"", "\\\"")
